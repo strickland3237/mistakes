@@ -1,0 +1,108 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# Build settings
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+
+minimal_mistakes_skin: "dirt" # dirt aqua
+minimal_mistakes_skin_dark: "dark"
+minimal_mistakes_skin_mint: "mint"
+minimal_mistakes_skin_plum: "plum"
+minimal_mistakes_skin_sunrise: "sunrise"
+
+
+locale      : "zh"
+title       : strickland
+subtitle    : (o-ωｑ)).oO 困
+name        : "strickland"
+email       : strickland3237@gmail.com
+description : >- # this means to ignore newlines until "baseurl:"
+  还没想好写什么
+baseurl     : "" # the subpath of your site, e.g. /blog
+url         : "" # the base hostname & protocol for your site, e.g. http://example.com
+github: [metadata]
+logo: "/assets/images/strickland.png"
+words_per_minute : 350
+
+author:
+  name: "strickland"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "还没想好写什么" # Note: Markdown is allowed
+  location: "Chengdu"
+  
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/strickland3237"
+    - label: "GitHub repository"
+      icon: "fas fa-fw fa-book"
+      url: "https://github.com/strickland3237/strickland3237.github.io"
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/strickland3237"
+    - label: "GitHub repository"
+      icon: "fas fa-fw fa-book"
+      url: "https://github.com/strickland3237/strickland3237.github.io"
+
+
+
+
+# Outputting
+permalink: /:categories/:title/
+paginate: # 5 # amount of posts to show
+paginate_path: # /page:num/
+timezone: # default
+breadcrumbs: true
+date_format: "%Y-%m-%d"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      sidebar:
+        - text: "<a class='author__flagcounter' href='https://s01.flagcounter.com/more/eQT7/'><img src='https://s01.flagcounter.com/count/eQT7/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/' ></a>"
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+include: ["_pages"]
+
+
